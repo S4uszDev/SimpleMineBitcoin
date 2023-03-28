@@ -1,0 +1,7 @@
+name: SimpleMineCash
+version: 1.0
+main: MineCash\Loader
+author: Danilo
+api: [3.0.0]
+description: 'Mine Cash plugin made for Rede Withe.'
+github: 'https://github.com/S4uszDev'
