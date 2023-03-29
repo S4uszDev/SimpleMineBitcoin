@@ -6,7 +6,7 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\Listener;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\item\Item;
 use pocketmine\block\Block;
 use pocketmine\utils\Config;
@@ -16,7 +16,7 @@ use pocketmine\Server;
 class Loader extends PluginBase implements Listener
 {
 
-    public function onEnable()
+    public function onEnable(): void
     {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder());
@@ -24,7 +24,7 @@ class Loader extends PluginBase implements Listener
         $this->infobreak->save();
         $this->cash = $this->getServer()->getPluginManager()->getPlugin("Cash");
     }
-    public function onDisable()
+    public function onDisable(): void
     {
         $this->infobreak->save();
     }
@@ -41,7 +41,7 @@ class Loader extends PluginBase implements Listener
             "Mundo-3"
         ];
 
-        if (!in_array($player->getLevel()->getFolderName(), $worlds)) return true;
+        if (!in_array($player->getWorld()->getFolderName(), $worlds)) return true;
 
         if (!$this->infobreak->exists($player->getName())) {
             $this->infobreak->set($player->getName(), 1);
