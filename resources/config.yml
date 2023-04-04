@@ -1,0 +1,34 @@
+######################################
+#
+#
+#
+#       Config simples para usar
+#
+#
+#
+######################################
+
+# aqui digite a quantidade de blocos que quer que sejam quebrados ate ganhar a quantidade de bitcoins
+blocks: 25
+
+# nessa parte digite dois valores para o plugin randomizar um valor para dar ao jogador quando a quantidade de blocos for atingida
+
+valor-minimo: 1
+valor maximo: 5
+
+# aqui digite os mundos que deseja que o plugin funcione
+Mundos:
+  - FreeMap8
+  - world
+
+# aqui digite os ids dos blocos que o plugin ira aplicar
+ids:
+  - 1
+  - 3
+
+mensagem:
+  - ""
+  - "§l§bParabéns!"
+  - ""
+  - "§rVocê acabou de ganhar §a{value} §rde BitCoin(s) minerando."
+  - ""
